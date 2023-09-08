@@ -6,7 +6,7 @@ import {
 } from "react-icons/hi2";
 
 //Logo
-import Logo from "../../../assets/logos/LogoEP_A.svg";
+import Logo from "../../../assets/logos/LogoEP_V.svg";
 
 function Menu() {
    const toggleMenu = () => {
