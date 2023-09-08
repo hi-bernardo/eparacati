@@ -5,6 +5,9 @@ import {
    HiOutlineNewspaper,
 } from "react-icons/hi2";
 
+//Logo
+import Logo from "../../../assets/logos/LogoEP_A.svg";
+
 function Menu() {
    const toggleMenu = () => {
       document
@@ -46,13 +49,10 @@ function Menu() {
                      </button>
                      <a href="https://flowbite.com" class="flex ml-2 md:mr-24">
                         <img
-                           src="https://flowbite.com/docs/images/logo.svg"
+                           src={Logo}
                            class="h-8 mr-3"
-                           alt="FlowBite Logo"
+                           alt="EP Aracati Logo"
                         />
-                        <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                           Flowbite
-                        </span>
                      </a>
                   </div>
                   <div class="flex items-center">
