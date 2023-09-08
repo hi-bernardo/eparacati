@@ -8,7 +8,11 @@ function App() {
       <>
          <Menu />
          <Footer />
-         <Anchor title="Isso é um link" href="https://github.com" target="_blank"/>
+         <Anchor
+            title="Isso é um link"
+            href="https://github.com"
+            target="_blank"
+         />
       </>
    );
 }
