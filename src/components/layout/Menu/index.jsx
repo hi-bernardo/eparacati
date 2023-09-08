@@ -1,3 +1,6 @@
+//Hooks
+import { useState } from "react";
+
 //Icons
 import {
    HiOutlineHome,
@@ -8,8 +11,14 @@ import {
 //Logo
 import Logo from "../../../assets/logos/LogoEP_V.svg";
 
+//Components
+import Overlay from "../Overlay";
+
 function Menu() {
+   const [menuOpened, setMenuOpened] = useState(false);
+
    const toggleMenu = () => {
+      setMenuOpened((current) => !current);
       document
          .getElementById("logo-sidebar")
          .classList.toggle("-translate-x-full");
@@ -47,7 +56,7 @@ function Menu() {
                            ></path>
                         </svg>
                      </button>
-                     <a href="https://flowbite.com" class="flex ml-2 md:mr-24">
+                     <a href="/" class="flex ml-2 md:mr-24">
                         <img
                            src={Logo}
                            class="h-10 mr-3"
@@ -251,6 +260,7 @@ function Menu() {
                </ul>
             </div>
          </aside>
+         {menuOpened && <Overlay customClass="z-20" />}
       </>
    );
 }
