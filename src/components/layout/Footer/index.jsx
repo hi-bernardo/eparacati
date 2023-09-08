@@ -18,7 +18,7 @@ function Footer() {
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Instituição</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://www.instagram.com/eparacati/" class="hover:underline ">Escola EP de Aracati</a>
+                          <a href="https://qedu.org.br/escola/23265426-eeep-professora-elsa-maria-porto-costa-lima" class="hover:underline ">Escola EP de Aracati</a>
                       </li>
                       <li>
                           <a href="https://www.instagram.com/gremioadolfocaminha/" class="hover:underline">Grêmio Adolfo Caminha</a>
@@ -54,7 +54,7 @@ function Footer() {
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"><svg class="h-3 w-3 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="3" y1="21" x2="21" y2="21" />  <line x1="9" y1="8" x2="10" y2="8" />  <line x1="9" y1="12" x2="10" y2="12" />  <line x1="9" y1="16" x2="10" y2="16" />  <line x1="14" y1="8" x2="15" y2="8" />  <line x1="14" y1="12" x2="15" y2="12" />  <line x1="14" y1="16" x2="15" y2="16" />  <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" /></svg> 2009 <a href="https://www.instagram.com/eparacati/" class="hover:underline">EP Aracati™</a>. Todos os direitos reservados.
+          <span class="text-sm text-gray-500 sm:text-center flex dark:text-gray-400"><svg class="h-4 w-4 text-gray-500 mr-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="3" y1="21" x2="21" y2="21" />  <line x1="9" y1="8" x2="10" y2="8" />  <line x1="9" y1="12" x2="10" y2="12" />  <line x1="9" y1="16" x2="10" y2="16" />  <line x1="14" y1="8" x2="15" y2="8" />  <line x1="14" y1="12" x2="15" y2="12" />  <line x1="14" y1="16" x2="15" y2="16" />  <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" /></svg>  2009 <a href="https://www.instagram.com/eparacati/" class="hover:underline"><span class="mr-1"></span>EP Aracati™</a>. Todos os direitos reservados.
           </span>
           <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
               <a href="https://www.facebook.com/eeparacati" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
