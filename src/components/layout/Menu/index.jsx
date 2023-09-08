@@ -50,7 +50,7 @@ function Menu() {
                      <a href="https://flowbite.com" class="flex ml-2 md:mr-24">
                         <img
                            src={Logo}
-                           class="h-11 mr-3"
+                           class="h-10 mr-3"
                            alt="EP Aracati Logo"
                         />
                      </a>
