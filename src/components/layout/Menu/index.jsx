@@ -6,6 +6,7 @@ import {
    HiOutlineHome,
    HiOutlineBookOpen,
    HiOutlineNewspaper,
+
 } from "react-icons/hi2";
 
 //Logo
@@ -96,7 +97,7 @@ function Menu() {
                               <span className="sr-only">Open user menu</span>
                               <img
                                  className="w-8 h-8 rounded-full"
-                                 src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
                                  alt="user photo"
                               />
                            </button>
@@ -279,7 +280,7 @@ function Menu() {
                </ul>
             </div>
          </aside>
-         {menuOpened && <Overlay customClass="z-20" />}
+         {menuOpened && <Overlay customClass="z-20" closeMenuFunc={toggleMenu}/>}
       </>
    );
 }
