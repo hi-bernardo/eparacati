@@ -2,12 +2,7 @@
 import { useState } from "react";
 
 //Icons
-import {
-   HiOutlineHome,
-   HiOutlineBookOpen,
-   HiOutlineNewspaper,
-
-} from "react-icons/hi2";
+import { HiHome, HiBookOpen, HiNewspaper } from "react-icons/hi2";
 
 //Logo
 import Logo from "../../../assets/logos/LogoEP_V.svg";
@@ -64,27 +59,56 @@ function Menu() {
                            alt="EP Aracati Logo"
                         />
                      </a>
-                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+                  </div>
+                  <div className="flex items-center gap-12">
+                     <div
+                        className="hidden w-full md:block md:w-auto"
+                        id="navbar-default"
+                     >
                         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white md:dark:bg-gray-900 dark:border-gray-700">
-                        <li>
-                           <a href="#" className="block py-2 pl-3 pr-4 text-white bg-primary rounded md:bg-transparent md:text-primary md:p-0 dark:text-white md:dark:text-primary" aria-current="page">Início</a>
-                        </li>
-                        <li>
-                           <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
-                        </li>
-                        <li>
-                           <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Livros</a>
-                        </li>
-                        <li>
-                           <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-                        </li>
-                        <li>
-                           <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                        </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 className="block py-2 pl-3 pr-4 text-white bg-primary rounded md:bg-transparent md:text-primary md:p-0 dark:text-white md:dark:text-primary"
+                                 aria-current="page"
+                              >
+                                 Início
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                              >
+                                 Blog
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                              >
+                                 Livros
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                              >
+                                 Pricing
+                              </a>
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                              >
+                                 Contact
+                              </a>
+                           </li>
                         </ul>
                      </div>
-                  </div>
-                  <div className="flex items-center">
                      <div className="flex items-center ml-3">
                         <div>
                            <button
@@ -103,7 +127,7 @@ function Menu() {
                            </button>
                         </div>
                         <div
-                           className="z-50 top-7 right-3 absolute hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-800 dark:divide-gray-600"
+                           className="z-50 top-10 right-3 absolute hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-800 dark:divide-gray-600"
                            id="dropdown-user"
                         >
                            <div className="px-4 py-3" role="none">
@@ -168,7 +192,7 @@ function Menu() {
                         href="#"
                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 group"
                      >
-                        <HiOutlineHome className="text-2xl" />
+                        <HiHome className="text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-gray-500" />
                         <span className="ml-3">Início</span>
                      </a>
                   </li>
@@ -177,8 +201,10 @@ function Menu() {
                         href="#"
                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 group"
                      >
-                        <HiOutlineNewspaper className="text-2xl" />
-                        <span className="flex-1 ml-3 whitespace-nowrap">Blog</span>
+                        <HiNewspaper className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+                        <span className="flex-1 ml-3 whitespace-nowrap">
+                           Blog
+                        </span>
                         <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-gray-300">
                            3
                         </span>
@@ -189,7 +215,7 @@ function Menu() {
                         href="#"
                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 group"
                      >
-                        <HiOutlineBookOpen className="text-2xl" />
+                        <HiBookOpen className="text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-gray-500" />
                         <span className="flex-1 ml-3 whitespace-nowrap">
                            Livros
                         </span>
@@ -209,7 +235,9 @@ function Menu() {
                         >
                            <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                         </svg>
-                        <span className="flex-1 ml-3 whitespace-nowrap">Users</span>
+                        <span className="flex-1 ml-3 whitespace-nowrap">
+                           Users
+                        </span>
                      </a>
                   </li>
                   <li>
@@ -280,7 +308,9 @@ function Menu() {
                </ul>
             </div>
          </aside>
-         {menuOpened && <Overlay customClass="z-20" closeMenuFunc={toggleMenu}/>}
+         {menuOpened && (
+            <Overlay customClass="z-20" closeMenuFunc={toggleMenu} />
+         )}
       </>
    );
 }
