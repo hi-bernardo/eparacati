@@ -60,7 +60,7 @@ function Menu() {
                         />
                      </a>
                   </div>
-                  <div className="flex items-center gap-12">
+                  <div className="flex items-center gap-7">
                      <div
                         className="hidden w-full md:block md:w-auto"
                         id="navbar-default"
