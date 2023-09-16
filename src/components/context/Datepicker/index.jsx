@@ -10,7 +10,7 @@ function Datepicker() {
       let today = new Date();
       let date = new Date();
 
-      currentMonth.textContent = date.toLocaleDateString("en-US", {
+      currentMonth.textContent = date.toLocaleDateString("pt-BR", {
          month: "long",
          year: "numeric",
       });
@@ -70,7 +70,7 @@ function Datepicker() {
             date.setMonth(
                date.getMonth() + (element.classList.contains("prev") ? -1 : 1)
             );
-            currentMonth.textContent = date.toLocaleDateString("en-US", {
+            currentMonth.textContent = date.toLocaleDateString("pt-BR", {
                month: "long",
                year: "numeric",
             });
@@ -87,7 +87,7 @@ function Datepicker() {
                date = new Date(date.getFullYear() - 1, 0, 1);
             else date = new Date(date.getFullYear() + 1, 0, 1);
 
-            currentMonth.textContent = date.toLocaleDateString("en-US", {
+            currentMonth.textContent = date.toLocaleDateString("pt-BR", {
                month: "long",
                year: "numeric",
             });

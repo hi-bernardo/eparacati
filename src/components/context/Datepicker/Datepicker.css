@@ -80,6 +80,10 @@
    cursor: pointer;
    box-shadow: inset 0px 0px 0px 1.5px #4ec027;
 }
+.prev-month-day, .next-month-day {
+   color: #8a8a8a;
+   pointer-events: none;
+}
 
 /* .calendar-toolbar > [class$="month-btn"]:focus,
 .month-day:focus,
