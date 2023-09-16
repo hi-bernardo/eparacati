@@ -1,0 +1,90 @@
+.datepicker {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+}
+.card {
+   width: 370px;
+   height: fit-content;
+   border-radius: 15px;
+}
+
+.calendar-toolbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   padding-bottom: 15px;
+}
+
+.calendar-toolbar > .current-month {
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.calendar-toolbar .month-btn {
+   width: 40px;
+   aspect-ratio: 1;
+   text-align: center;
+   border: none;
+   border-radius: 10px;
+   padding: 0.2rem;
+}
+
+.weekdays,
+.calendar-days {
+   display: flex;
+   padding-inline: 18px;
+}
+.weekdays {
+   padding-top: 12px;
+}
+.calendar-days {
+   padding-bottom: 12px;
+}
+
+.weekday-name,
+[class$="-day"] {
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   line-height: 40px;
+   font-weight: 500;
+   font-size: 1rem;
+}
+
+.weekday-name {
+   font-weight: 700;
+}
+
+.current-day {
+   background-color: #4ec027;
+   border-radius: 15px;
+   font-weight: 700;
+   transition: 0.5s;
+   cursor: pointer;
+}
+
+.padding-day {
+   color: #a5a5a5;
+   user-select: none;
+}
+
+.calendar-toolbar > [class$="month-btn"]:hover,
+.month-day:hover,
+.btn:hover {
+   border-radius: 15px;
+   color: #4ec027;
+   transition: 0.1s;
+   cursor: pointer;
+   box-shadow: inset 0px 0px 0px 1.5px #4ec027;
+}
+
+/* .calendar-toolbar > [class$="month-btn"]:focus,
+.month-day:focus,
+.btn:focus {
+   border-radius: 15px;
+   background-color: #4ec027;
+   color: #f8f7fa;
+} */
