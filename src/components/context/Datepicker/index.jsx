@@ -98,13 +98,13 @@ function Datepicker() {
 
    return (
       <div className="datepicker">
-         <div className="card bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+         <div className="card bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <div className="calendar-toolbar border-b border-gray-200 dark:border-gray-800">
-               <button className="prev month-btn text-3xl text-center align-middle items-center text-gray-50 bg-primary">
+               <button className="prev month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                   <HiChevronLeft />
                </button>
                <div className="current-month text-gray-950 dark:text-gray-50"></div>
-               <button className="next month-btn text-3xl text-center align-middle items-center text-gray-50 bg-primary">
+               <button className="next month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                   <HiChevronRight />
                </button>
             </div>

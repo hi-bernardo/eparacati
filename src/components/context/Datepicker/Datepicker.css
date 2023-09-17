@@ -24,12 +24,9 @@
 }
 
 .calendar-toolbar .month-btn {
-   width: 40px;
+   /* width: 40px;
    aspect-ratio: 1;
-   text-align: center;
-   border: none;
-   border-radius: 10px;
-   padding: 0.2rem;
+   padding: 0.2rem; */
 }
 
 .weekdays,
