@@ -71,7 +71,7 @@ function Footer() {
             <div className="sm:flex sm:items-center sm:justify-between">
                <span className="flex items-center align-middle text-sm text-gray-500 sm:text-center dark:text-gray-400">
                   <HiOutlineBuildingOffice className="text-2xl" />
-                  &copy; EEEP Professora Elsa Maria Porto Costa Lima 2009 -{" "}
+                  EEEP Professora Elsa Maria Porto Costa Lima 2009 -{" "}
                   {date.getFullYear()}.
                </span>
                <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">

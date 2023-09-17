@@ -2,7 +2,32 @@ import Datepicker from "../../components/context/Datepicker";
 import Select from "../../components/layout/Select";
 
 function Agendamento() {
-   const selectOptions = {
+   const selectDisponiveis = {
+      options: [
+         {
+            value: "01",
+            title: "01",
+         },
+         {
+            value: "02",
+            title: "02",
+         },
+         {
+            value: "03",
+            title: "03",
+         },
+         {
+            value: "04",
+            title: "04",
+         },
+         {
+            value: "05",
+            title: "05",
+         },
+      ],
+   };
+
+   const selectTurma = {
       options: [
          {
             value: "ser-1",
@@ -54,10 +79,85 @@ function Agendamento() {
          },
       ],
    };
+
+   const selectAula = {
+      options: [
+         {
+            value: "1-aula",
+            title: "1° Aula",
+         },
+         {
+            value: "2-aula",
+            title: "2° Aula",
+         },
+         {
+            value: "3-aula",
+            title: "3° Aula",
+         },
+         {
+            value: "4-aula",
+            title: "4° Aula",
+         },
+         {
+            value: "5-aula",
+            title: "5° Aula",
+         },
+         {
+            value: "6-aula",
+            title: "6° Aula",
+         },
+         {
+            value: "7-aula",
+            title: "7° Aula",
+         },
+         {
+            value: "8-aula",
+            title: "8° Aula",
+         },
+         {
+            value: "9-aula",
+            title: "9° Aula",
+         },
+      ],
+   };
+
    return (
-      <main className="mt-16 max-w-[960px] mx-auto p-4">
-         <Datepicker />
-         <Select label="Escolha da turma:" options={selectOptions.options} />
+      <main className="mt-20 max-w-[750px] mx-auto p-4 flex flex-col gap-7">
+         <h2 className="text-2xl font-bold text-white">Agendar Equipamento</h2>
+         <div className="flex flex-row justify-between">
+            <Datepicker />
+            <div className="flex flex-col gap-8">
+               <Select
+                  label="Disponíveis:"
+                  placeholder="Escolha o Equipamento Disponível"
+                  options={selectDisponiveis.options}
+               />
+               <Select
+                  label="Turma:"
+                  placeholder="Escolha uma turma"
+                  options={selectTurma.options}
+               />
+               <Select
+                  label="Aula:"
+                  placeholder="Escolha o horário"
+                  options={selectAula.options}
+               />
+            </div>
+         </div>
+         <div className="flex flex-row gap-5 justify-end">
+            <button
+               type="button"
+               class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+               Cancelar
+            </button>
+            <button
+               type="button"
+               class="text-white bg-blue-700 hover:bg-primaryLight focus:ring-transparent focus:ring-transparent font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary dark:hover:bg-primaryLight focus:outline-none dark:focus:ring-transparent"
+            >
+               Agendar
+            </button>
+         </div>
       </main>
    );
 }
