@@ -1,9 +1,7 @@
 // Logo
 import Logo from "../../../assets/logos/LogoEP_V.svg";
 
-import {
-   HiOutlineBuildingOffice,
-} from "react-icons/hi2"
+import { HiOutlineBuildingOffice } from "react-icons/hi2";
 
 function Footer() {
    const date = new Date();
@@ -25,7 +23,7 @@ function Footer() {
                      <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                         LEGAL
                      </h2>
-                     <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                     <ul className="text-gray-500 dark:text-gray-400 font-medium sm:flex flex-row sm:gap-4">
                         <li className="mb-4">
                            <a
                               href="https://www.instagram.com/eparacati/"
@@ -48,7 +46,7 @@ function Footer() {
                      <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                         Projeto
                      </h2>
-                     <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                     <ul className="text-gray-500 dark:text-gray-400 font-medium sm:flex flex-row sm:gap-4">
                         <li className="mb-4">
                            <a
                               href="https://github.com/Brazoo/eparacati"
@@ -72,8 +70,9 @@ function Footer() {
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div className="sm:flex sm:items-center sm:justify-between">
                <span className="flex items-center align-middle text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                  <HiOutlineBuildingOffice  className="text-2xl"/>
-                  &copy; EEEP Professora Elsa Maria Porto Costa Lima 2009 - {date.getFullYear()}.
+                  <HiOutlineBuildingOffice className="text-2xl" />
+                  &copy; EEEP Professora Elsa Maria Porto Costa Lima 2009 -{" "}
+                  {date.getFullYear()}.
                </span>
                <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                   <a
