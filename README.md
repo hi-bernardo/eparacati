@@ -21,7 +21,7 @@
   
   ### Tecnologias utilizadas:  
   
-  <img src="https://skillicons.dev/icons?i=js,django,react,python,php">  
+  <img src="https://skillicons.dev/icons?i=js,django,react,python,laravel,mysql">  
   
   <br>  
   
