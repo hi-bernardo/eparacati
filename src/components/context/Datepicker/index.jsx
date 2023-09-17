@@ -100,11 +100,11 @@ function Datepicker() {
       <div className="datepicker">
          <div className="card bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
             <div className="calendar-toolbar border-b border-gray-200 dark:border-gray-800">
-               <button className="prev month-btn text-3xl text-center align-middle items-center text-gray-950 dark:text-gray-50 bg-primary">
+               <button className="prev month-btn text-3xl text-center align-middle items-center text-gray-50 bg-primary">
                   <HiChevronLeft />
                </button>
                <div className="current-month text-gray-950 dark:text-gray-50"></div>
-               <button className="next month-btn text-3xl text-center align-middle items-center text-gray-950 dark:text-gray-50 bg-primary">
+               <button className="next month-btn text-3xl text-center align-middle items-center text-gray-50 bg-primary">
                   <HiChevronRight />
                </button>
             </div>
