@@ -129,7 +129,7 @@ function Agendamento() {
             <div className="flex flex-col gap-8">
                <Select
                   label="Disponíveis:"
-                  placeholder="Escolha o Equipamento Disponível"
+                  placeholder="Escolha o equipamento disponível"
                   options={selectDisponiveis.options}
                />
                <Select

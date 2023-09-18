@@ -54,8 +54,9 @@
    font-weight: 700;
 }
 
-.current-day {
-   background-color: #4ec027;
+.selected-day {
+   background-color: #37b10e;
+   color: #fefefe;
    border-radius: 15px;
    font-weight: 700;
    transition: 0.5s;
@@ -71,12 +72,13 @@
 .month-day:hover,
 .btn:hover {
    border-radius: 15px;
-   color: #4ec027;
+   color: #37b10e;
    transition: 0.1s;
    cursor: pointer;
-   box-shadow: inset 0px 0px 0px 1.5px #4ec027;
+   box-shadow: inset 0px 0px 0px 1.5px #37b10e;
 }
-.prev-month-day, .next-month-day {
+.prev-month-day,
+.next-month-day {
    color: #8a8a8a;
    pointer-events: none;
 }
@@ -85,6 +87,6 @@
 .month-day:focus,
 .btn:focus {
    border-radius: 15px;
-   background-color: #4ec027;
+   background-color:#37b10e;
    color: #f8f7fa;
 } */

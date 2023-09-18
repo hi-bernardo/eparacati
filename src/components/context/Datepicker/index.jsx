@@ -52,9 +52,9 @@ function Datepicker() {
 
                let dayClass =
                   date.getTime() === today.getTime()
-                     ? "current-day"
+                     ? "selected-day"
                      : "month-day";
-               calendarDays.innerHTML += `<span class="${dayClass}">${day}</span>`;
+               calendarDays.innerHTML += `<span class="${dayClass}" id="day-${day}">${day}</span>`;
             } else {
                // adding next month days
                calendarDays.innerHTML += `<span class="next-month-day">${
@@ -93,6 +93,20 @@ function Datepicker() {
             });
             renderCalendar();
          });
+      });
+
+      calendarDays.addEventListener("click", (event) => {
+         const selectedDay = document.querySelector(".selected-day");
+
+         if (event.target.classList.contains("month-day")) {
+            let dayId = event.target.id;
+
+            document.getElementById(dayId).classList.remove("month-day");
+            document.getElementById(dayId).classList.add("selected-day");
+
+            selectedDay.classList.remove("selected-day");
+            selectedDay.classList.add("month-day");
+         }
       });
    }, []);
 
