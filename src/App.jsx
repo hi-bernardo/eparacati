@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Pages
 import Home from "./pages/Home";
-import Agendamento from "./pages/Agendamento";
+import Agendar from "./pages/Agendar";
 
 //Components
 import Menu from "./components/layout/Menu";
@@ -16,7 +16,7 @@ function App() {
             <Menu />
             <Routes>
                <Route exact path="/" element={<Home />} />
-               <Route path="/agendamento" element={<Agendamento />} />
+               <Route path="/agendar" element={<Agendar />} />
             </Routes>
             <Footer />
          </Router>

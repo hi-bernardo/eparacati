@@ -138,8 +138,13 @@ function Agendamento() {
                   options={selectTurma.options}
                />
                <Select
-                  label="Aula:"
-                  placeholder="Escolha o horário"
+                  label="Horário de início:"
+                  placeholder="Escolha o horário de início"
+                  options={selectAula.options}
+               />
+               <Select
+                  label="Horário de final"
+                  placeholder="Escolha o horário de final"
                   options={selectAula.options}
                />
             </div>
@@ -147,13 +152,13 @@ function Agendamento() {
          <div className="flex flex-row gap-5 justify-end">
             <button
                type="button"
-               class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600"
+               className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600"
             >
                Cancelar
             </button>
             <button
                type="button"
-               class="text-white bg-primary hover:bg-primaryDark font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+               className="text-white bg-primary hover:bg-primaryDark font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
             >
                Agendar
             </button>

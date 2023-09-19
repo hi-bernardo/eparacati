@@ -9,6 +9,7 @@ function Datepicker() {
       let calendarDays = document.querySelector(".calendar-days");
       let today = new Date();
       let date = new Date();
+      console.log(date.getMonth())
 
       currentMonth.textContent = date.toLocaleDateString("en-US", {
          month: "long",
@@ -54,7 +55,7 @@ function Datepicker() {
                   date.getTime() === today.getTime()
                      ? "selected-day"
                      : "month-day";
-               calendarDays.innerHTML += `<span class="${dayClass}" id="day-${day}">${day}</span>`;
+               calendarDays.innerHTML += `<span class="${dayClass}" id="day-${day}" value=${day}>${day}</span>`;
             } else {
                // adding next month days
                calendarDays.innerHTML += `<span class="next-month-day">${

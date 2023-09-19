@@ -96,7 +96,7 @@ function Menu() {
                                  href="#"
                                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                               >
-                                 Pricing
+                                 Agendamentos
                               </a>
                            </li>
                            <li>
@@ -127,7 +127,7 @@ function Menu() {
                            </button>
                         </div>
                         <div
-                           className="z-50 top-10 right-3 absolute hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-600"
+                           className="z-50 top-14 right-3 absolute hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-600"
                            id="dropdown-user"
                         >
                            <div className="px-4 py-3" role="none">
