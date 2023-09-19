@@ -7,10 +7,10 @@ function Footer() {
    const date = new Date();
 
    return (
-      <footer className="bg-white dark:bg-gray-900 absolute bottom-0 w-screen">
+      <footer className="bg-white dark:bg-gray-900 w-screen">
          <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div className="md:flex md:justify-between">
-               <div className="mb-6 md:mb-0">
+            <div className="lg:flex lg:justify-between">
+               <div className="mb-6 lg:mb-0">
                   <a href="/" className="flex items-center">
                      <img src={Logo} className="h-8 mr-3" alt="EP Logo" />
                      <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
@@ -69,7 +69,7 @@ function Footer() {
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div className="sm:flex sm:items-center sm:justify-between">
-               <span className="flex items-center align-middle text-sm text-gray-500 sm:text-center dark:text-gray-400">
+               <span className="flex items-center align-middle text-sm text-gray-500 sm:text-center gap-1 dark:text-gray-400">
                   <HiOutlineBuildingOffice className="text-2xl" />
                   EEEP Professora Elsa Maria Porto Costa Lima 2009 -{" "}
                   {date.getFullYear()}.
@@ -116,7 +116,7 @@ function Footer() {
                            ry="5"
                         />
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />{" "}
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        <line x1="17.5" y1="g6.5" x2="17.51" y2="6.5" />
                      </svg>
                      <span className="sr-only">Instagram perfil</span>
                   </a>
