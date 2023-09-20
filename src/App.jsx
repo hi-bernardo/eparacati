@@ -16,6 +16,7 @@ function App() {
             <Menu />
             <Routes>
                <Route exact path="/" element={<Home />} />
+               <Route path="/agendamentos" element={<Agendar />} />
                <Route path="/agendar" element={<Agendar />} />
             </Routes>
             <Footer />

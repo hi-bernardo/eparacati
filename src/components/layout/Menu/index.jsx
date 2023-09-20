@@ -127,7 +127,7 @@ function Menu() {
                            </button>
                         </div>
                         <div
-                           className="z-50 top-14 right-3 absolute hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-600"
+                           className="z-50 top-10 right-3 absolute hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-600"
                            id="dropdown-user"
                         >
                            <div className="px-4 py-3" role="none">
