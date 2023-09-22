@@ -7,7 +7,7 @@ function Footer() {
    const date = new Date();
 
    return (
-      <footer className="bg-white dark:bg-gray-900 w-screen">
+      <footer className="bg-white dark:bg-gray-900">
          <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div className="lg:flex lg:justify-between">
                <div className="mb-6 lg:mb-0">
