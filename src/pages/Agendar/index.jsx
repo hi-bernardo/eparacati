@@ -138,12 +138,12 @@ function Agendamento() {
                   options={selectTurma.options}
                />
                <Select
-                  label="Horário de início:"
+                  label="Horário inicial:"
                   placeholder="Escolha o horário de início"
                   options={selectAula.options}
                />
                <Select
-                  label="Horário de final"
+                  label="Horário final"
                   placeholder="Escolha o horário de final"
                   options={selectAula.options}
                />
