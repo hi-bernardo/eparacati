@@ -1,7 +1,27 @@
 import Datepicker from "../../components/context/Datepicker";
 import Select from "../../components/layout/Select";
 
+//Firebase config
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
+
+const firebaseConfig = {
+   apiKey: "AIzaSyCPxJND1td1DTHunO60n0QWzQj5_r-pUj0",
+   authDomain: "eeparacati.firebaseapp.com",
+   databaseURL: "https://eeparacati-default-rtdb.firebaseio.com",
+   projectId: "eeparacati",
+   storageBucket: "eeparacati.appspot.com",
+   messagingSenderId: "161107487226",
+   appId: "1:161107487226:web:affeab9b1cf488cfbcdc43",
+   measurementId: "G-DCWRRY4QHC",
+}; // Initialize Firebase
+
 function Agendamento() {
+   const app = initializeApp(firebaseConfig);
+   const analytics = getAnalytics(app);
+   const db = getDatabase(app);
+
    const selectDisponiveis = {
       options: [
          {
@@ -120,10 +140,21 @@ function Agendamento() {
          },
       ],
    };
-   
-   const setScheduleData= () => {
-      console.log("espera ai não ta feito @hiago")
-   }
+
+   const setScheduleData = () => {
+      const scheduleData = {
+         equipamento: document.getElementById("select-available").value,
+         professor: "Márcia Porto Viana",
+         data: document.querySelector(".selected-day").getAttribute("value"),
+         turma: document.getElementById("select-class").value,
+         horarios: {
+            horario_inicio: document.getElementById("select-startTime").value,
+            horario_final: document.getElementById("select-endTime").value,
+         },
+      };
+
+      console.log(scheduleData);
+   };
 
    return (
       <main className="mt-20 max-w-[750px] mx-auto p-4 flex flex-col gap-7">
@@ -135,21 +166,25 @@ function Agendamento() {
             <div className="flex flex-col gap-8 w-full">
                <Select
                   label="Disponíveis:"
+                  id="select-available"
                   placeholder="Escolha o equipamento disponível"
                   options={selectDisponiveis.options}
                />
                <Select
                   label="Turma:"
+                  id="select-class"
                   placeholder="Escolha uma turma"
                   options={selectTurma.options}
                />
                <Select
                   label="Horário inicial:"
+                  id="select-startTime"
                   placeholder="Escolha o horário de início"
                   options={selectAula.options}
                />
                <Select
                   label="Horário final"
+                  id="select-endTime"
                   placeholder="Escolha o horário de final"
                   options={selectAula.options}
                />
