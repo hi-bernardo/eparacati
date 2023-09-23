@@ -18,7 +18,7 @@ function App() {
             <Routes>
                <Route exact path="/" element={<Home />} />
                <Route path="/agendamentos" element={<Agendamentos />} />
-               <Route path="/agendar" element={<Agendar />} />
+               <Route path="/agendar/:item" element={<Agendar />} />
             </Routes>
             <Footer />
          </Router>

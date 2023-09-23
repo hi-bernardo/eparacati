@@ -11,16 +11,16 @@ function Table(props) {
 							Data
 						</th>
 						<th scope="col" className="px-6 py-3">
-							Horário Inicial
-						</th>
-						<th scope="col" className="px-6 py-3">
-							Horário Final
-						</th>
-						<th scope="col" className="px-6 py-3">
 							Professor
 						</th>
 						<th scope="col" className="px-6 py-3">
 							Turma
+						</th>
+						<th scope="col" className="px-6 py-3">
+							Horário Inicial
+						</th>
+						<th scope="col" className="px-6 py-3">
+							Horário Final
 						</th>
 					</tr>
 				</thead>

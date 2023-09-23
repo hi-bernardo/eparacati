@@ -120,10 +120,16 @@ function Agendamento() {
          },
       ],
    };
+   
+   const setScheduleData= () => {
+      console.log("espera ai não ta feito @hiago")
+   }
 
    return (
       <main className="mt-20 max-w-[750px] mx-auto p-4 flex flex-col gap-7">
-         <h2 className="text-2xl font-bold text-white text-center">Agendar Equipamento</h2>
+         <h2 className="text-2xl font-bold text-white text-center">
+            Agendar Equipamento
+         </h2>
          <div className="flex max-md:flex-col gap-6 justify-between items-center">
             <Datepicker />
             <div className="flex flex-col gap-8 w-full">
@@ -159,6 +165,7 @@ function Agendamento() {
             <button
                type="button"
                className="text-white bg-primary hover:bg-primaryDark font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+               onClick={setScheduleData}
             >
                Agendar
             </button>
