@@ -123,10 +123,10 @@ function Agendamento() {
 
    return (
       <main className="mt-20 max-w-[750px] mx-auto p-4 flex flex-col gap-7">
-         <h2 className="text-2xl font-bold text-white">Agendar Equipamento</h2>
-         <div className="flex flex-row justify-between">
+         <h2 className="text-2xl font-bold text-white text-center">Agendar Equipamento</h2>
+         <div className="flex max-md:flex-col gap-6 justify-between items-center">
             <Datepicker />
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 w-full">
                <Select
                   label="Disponíveis:"
                   placeholder="Escolha o equipamento disponível"

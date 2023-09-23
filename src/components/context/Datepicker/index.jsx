@@ -4,152 +4,152 @@ import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
 import "./Datepicker.css";
 
 function Datepicker() {
-   useEffect(() => {
-      let currentMonth = document.querySelector(".current-month");
-      let calendarDays = document.querySelector(".calendar-days");
-      let today = new Date();
-      let date = new Date();
+	useEffect(() => {
+		let currentMonth = document.querySelector(".current-month");
+		let calendarDays = document.querySelector(".calendar-days");
+		let today = new Date();
+		let date = new Date();
 
-      currentMonth.textContent = date.toLocaleDateString("en-US", {
-         month: "long",
-         year: "numeric",
-      });
-      today.setHours(0, 0, 0, 0);
-      renderCalendar();
+		currentMonth.textContent = date.toLocaleDateString("en-US", {
+			month: "long",
+			year: "numeric",
+		});
+		today.setHours(0, 0, 0, 0);
+		renderCalendar();
 
-      function renderCalendar() {
-         const prevLastDay = new Date(
-            date.getFullYear(),
-            date.getMonth(),
-            0
-         ).getDate();
-         const totalMonthDay = new Date(
-            date.getFullYear(),
-            date.getMonth() + 1,
-            0
-         ).getDate();
-         const startWeekDay = new Date(
-            date.getFullYear(),
-            date.getMonth(),
-            0
-         ).getDay();
+		function renderCalendar() {
+			const prevLastDay = new Date(
+				date.getFullYear(),
+				date.getMonth(),
+				0
+			).getDate();
+			const totalMonthDay = new Date(
+				date.getFullYear(),
+				date.getMonth() + 1,
+				0
+			).getDate();
+			const startWeekDay = new Date(
+				date.getFullYear(),
+				date.getMonth(),
+				0
+			).getDay();
 
-         calendarDays.innerHTML = "";
+			calendarDays.innerHTML = "";
 
-         let totalCalendarDay = 6 * 7;
-         for (let i = 0; i < totalCalendarDay; i++) {
-            let day = i - startWeekDay;
+			let totalCalendarDay = 6 * 7;
+			for (let i = 0; i < totalCalendarDay; i++) {
+				let day = i - startWeekDay;
 
-            if (i <= startWeekDay) {
-               // adding previous month days
-               calendarDays.innerHTML += `<span class="prev-month-day">${
-                  prevLastDay - i
-               }</span>`;
-            } else if (i <= startWeekDay + totalMonthDay) {
-               // adding this month days
-               date.setDate(day);
-               date.setHours(0, 0, 0, 0);
+				if (i <= startWeekDay) {
+					// adding previous month days
+					calendarDays.innerHTML += `<span class="prev-month-day">${
+						prevLastDay - i
+					}</span>`;
+				} else if (i <= startWeekDay + totalMonthDay) {
+					// adding this month days
+					date.setDate(day);
+					date.setHours(0, 0, 0, 0);
 
-               let dayClass =
-                  date.getTime() === today.getTime()
-                     ? "selected-day"
-                     : "month-day";
-               calendarDays.innerHTML += `<span class="${dayClass}" id="day-${day}">${day}</span>`;
-            } else {
-               // adding next month days
-               calendarDays.innerHTML += `<span class="next-month-day">${
-                  day - totalMonthDay
-               }</span>`;
-            }
-         }
-      }
+					let dayClass =
+						date.getTime() === today.getTime() ? "selected-day" : "month-day";
+					calendarDays.innerHTML += `<span class="${dayClass}" id="day-${day}">${day}</span>`;
+				} else {
+					// adding next month days
+					calendarDays.innerHTML += `<span class="next-month-day">${
+						day - totalMonthDay
+					}</span>`;
+				}
+			}
+		}
 
-      document.querySelectorAll(".month-btn").forEach(function (element) {
-         element.addEventListener("click", function () {
-            date = new Date(currentMonth.textContent);
-            date.setMonth(
-               date.getMonth() + (element.classList.contains("prev") ? -1 : 1)
-            );
-            currentMonth.textContent = date.toLocaleDateString("en-US", {
-               month: "long",
-               year: "numeric",
-            });
-            renderCalendar();
-         });
-      });
+		document.querySelectorAll(".month-btn").forEach(function (element) {
+			element.addEventListener("click", function () {
+				date = new Date(currentMonth.textContent);
+				date.setMonth(
+					date.getMonth() + (element.classList.contains("prev") ? -1 : 1)
+				);
+				currentMonth.textContent = date.toLocaleDateString("en-US", {
+					month: "long",
+					year: "numeric",
+				});
+				renderCalendar();
+			});
+		});
 
-      document.querySelectorAll(".btn").forEach(function (element) {
-         element.addEventListener("click", function () {
-            let btnClass = element.classList;
-            date = new Date(currentMonth.textContent);
-            if (btnClass.contains("today")) date = new Date();
-            else if (btnClass.contains("prev-year"))
-               date = new Date(date.getFullYear() - 1, 0, 1);
-            else date = new Date(date.getFullYear() + 1, 0, 1);
+		document.querySelectorAll(".btn").forEach(function (element) {
+			element.addEventListener("click", function () {
+				let btnClass = element.classList;
+				date = new Date(currentMonth.textContent);
+				if (btnClass.contains("today")) date = new Date();
+				else if (btnClass.contains("prev-year"))
+					date = new Date(date.getFullYear() - 1, 0, 1);
+				else date = new Date(date.getFullYear() + 1, 0, 1);
 
-            currentMonth.textContent = date.toLocaleDateString("en-US", {
-               month: "long",
-               year: "numeric",
-            });
-            renderCalendar();
-         });
-      });
+				currentMonth.textContent = date.toLocaleDateString("en-US", {
+					month: "long",
+					year: "numeric",
+				});
+				renderCalendar();
+			});
+		});
 
-      calendarDays.addEventListener("click", (event) => {
-         const selectedDay = document.querySelector(".selected-day");
+		calendarDays.addEventListener("click", (event) => {
+			const selectedDay = document.querySelector(".selected-day");
 
-         if (event.target.classList.contains("month-day")) {
-            let dayId = event.target.id;
+			if (event.target.classList.contains("month-day")) {
+				let dayId = event.target.id;
 
-            document.getElementById(dayId).classList.remove("month-day");
-            document.getElementById(dayId).classList.add("selected-day");
+				document.getElementById(dayId).classList.remove("month-day");
+				document.getElementById(dayId).classList.add("selected-day");
 
-            selectedDay.classList.remove("selected-day");
-            selectedDay.classList.add("month-day");
-         }
-      });
-   }, []);
+				selectedDay.classList.remove("selected-day");
+				selectedDay.classList.add("month-day");
+			}
+		});
+	}, []);
 
-   return (
-      <div className="datepicker">
-         <div className="card bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <div className="calendar-toolbar border-b border-gray-200 dark:border-gray-800">
-               <button className="prev month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
-                  <HiChevronLeft />
-               </button>
-               <div className="current-month text-gray-950 dark:text-gray-50"></div>
-               <button className="next month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
-                  <HiChevronRight />
-               </button>
-            </div>
-            <div className="calendar">
-               <div className="weekdays w-full flex justify-around">
-                  <div className="weekday-name text-gray-950 dark:text-gray-50">
-                     Dom
-                  </div>
-                  <div className="weekday-name text-gray-950 dark:text-gray-50">
-                     Seg
-                  </div>
-                  <div className="weekday-name text-gray-950 dark:text-gray-50">
-                     Ter
-                  </div>
-                  <div className="weekday-name text-gray-950 dark:text-gray-50">
-                     Qua
-                  </div>
-                  <div className="weekday-name text-gray-950 dark:text-gray-50">
-                     Qui
-                  </div>
-                  <div className="weekday-name text-gray-950 dark:text-gray-50">
-                     Sex
-                  </div>
-                  <div className="weekday-name text-gray-950 dark:text-gray-50">
-                     Sab
-                  </div>
-               </div>
-               <div className="calendar-days grid grid-cols-7 text-gray-900 dark:text-gray-100"></div>
-            </div>
-         </div>
-      </div>
-   );
+	return (
+		/* date-picker */
+      <div className="flex justify-center items-center select-none">
+         {/* card */}
+			<div className="card bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 w-96 max-sm:w-72 rounded-2xl">
+				<div className="calendar-toolbar border-b border-gray-200 dark:border-gray-800 flex justify-between items-center p-5 pb-4">
+					<button className="prev month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+						<HiChevronLeft />
+					</button>
+					<div className="current-month text-gray-950 dark:text-gray-50 text-xl max-md:text-lg max-sm:text-base text-center font-bold break-words"></div>
+					<button className="next month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+						<HiChevronRight />
+					</button>
+				</div>
+				<div className="calendar">
+					<div className="weekdays w-full flex justify-around px-4 mt-3">
+						<div className="weekday-name text-gray-950 dark:text-gray-50">
+							Dom
+						</div>
+						<div className="weekday-name text-gray-950 dark:text-gray-50">
+							Seg
+						</div>
+						<div className="weekday-name text-gray-950 dark:text-gray-50">
+							Ter
+						</div>
+						<div className="weekday-name text-gray-950 dark:text-gray-50">
+							Qua
+						</div>
+						<div className="weekday-name text-gray-950 dark:text-gray-50">
+							Qui
+						</div>
+						<div className="weekday-name text-gray-950 dark:text-gray-50">
+							Sex
+						</div>
+						<div className="weekday-name text-gray-950 dark:text-gray-50">
+							Sab
+						</div>
+					</div>
+					<div className="calendar-days grid grid-cols-7 text-gray-900 dark:text-gray-100 px-4 pb-3"></div>
+				</div>
+			</div>
+		</div>
+	);
 }
 export default Datepicker;
