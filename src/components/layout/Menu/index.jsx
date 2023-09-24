@@ -1,8 +1,16 @@
 //Hooks
 import { useState } from "react";
 
+//React router
+import { Link } from "react-router-dom";
+
 //Icons
-import { HiHome, HiBookOpen, HiNewspaper, HiMiniCalendarDays} from "react-icons/hi2";
+import {
+   HiHome,
+   HiBookOpen,
+   HiNewspaper,
+   HiMiniCalendarDays,
+} from "react-icons/hi2";
 
 //Logo
 import Logo from "../../../assets/logos/LogoEP_V.svg";
@@ -52,13 +60,13 @@ function Menu() {
                            ></path>
                         </svg>
                      </button>
-                     <a href="/" className="flex ml-2 md:mr-24">
+                     <Link to="/" className="flex ml-2 md:mr-24">
                         <img
                            src={Logo}
                            className="h-10 mr-3"
                            alt="EP Aracati Logo"
                         />
-                     </a>
+                     </Link>
                   </div>
                   <div className="flex items-center gap-7">
                      <div
@@ -67,29 +75,29 @@ function Menu() {
                      >
                         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white md:dark:bg-gray-900 dark:border-gray-700">
                            <li>
-                              <a
-                                 href="/"
+                              <Link
+                                 to="/"
                                  className="block py-2 pl-3 pr-4 rounded md:bg-transparent text-primary md:p-0 dark:text-white md:dark:text-primary"
                                  aria-current="page"
                               >
                                  Início
-                              </a>
+                              </Link>
                            </li>
                            <li>
-                              <a
-                                 href="/agendamentos"
+                              <Link
+                                 to="/agendamentos"
                                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primaryDark md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                               >
                                  Agendamentos
-                              </a>
+                              </Link>
                            </li>
                            <li>
-                              <a
-                                 href="#"
+                              <Link
+                                 to="/livros"
                                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primaryDark md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                               >
                                  Livros
-                              </a>
+                              </Link>
                            </li>
                         </ul>
                      </div>
@@ -132,31 +140,31 @@ function Menu() {
                            </div>
                            <ul className="py-1" role="none">
                               <li>
-                                 <a
-                                    href="#"
+                                 <Link
+                                    to="#"
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem"
                                  >
                                     Perfil
-                                 </a>
+                                 </Link>
                               </li>
                               <li>
-                                 <a
-                                    href="#"
+                                 <Link
+                                    to="#"
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem"
                                  >
                                     Configurações
-                                 </a>
+                                 </Link>
                               </li>
                               <li>
-                                 <a
-                                    href="#"
+                                 <Link
+                                    to="#"
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem"
                                  >
                                     Sair
-                                 </a>
+                                 </Link>
                               </li>
                            </ul>
                         </div>
@@ -175,26 +183,26 @@ function Menu() {
             <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-900">
                <ul className="space-y-2 font-medium">
                   <li>
-                     <a
-                        href="/"
+                     <Link
+                        to="/"
                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 group"
                      >
                         <HiHome className="text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-gray-500" />
                         <span className="ml-3">Início</span>
-                     </a>
+                     </Link>
                   </li>
                   <li>
-                     <a
-                        href="/agendamentos"
+                     <Link
+                        to="/agendamentos"
                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 group"
                      >
                         <HiMiniCalendarDays className="text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-gray-500" />
                         <span className="ml-3">Agendamentos</span>
-                     </a>
+                     </Link>
                   </li>
                   <li>
-                     <a
-                        href="#"
+                     <Link
+                        to="/blog"
                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 group"
                      >
                         <HiNewspaper className="text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
@@ -204,18 +212,18 @@ function Menu() {
                         <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-gray-300">
                            3
                         </span>
-                     </a>
+                     </Link>
                   </li>
                   <li>
-                     <a
-                        href="#"
+                     <Link
+                        to="/livros"
                         className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 group"
                      >
                         <HiBookOpen className="text-2xl dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white text-gray-500" />
                         <span className="flex-1 ml-3 whitespace-nowrap">
                            Livros
                         </span>
-                     </a>
+                     </Link>
                   </li>
                </ul>
             </div>

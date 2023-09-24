@@ -1,6 +1,9 @@
 import Datepicker from "../../components/context/Datepicker";
 import Select from "../../components/layout/Select";
 
+//React Router
+import { useParams } from "react-router-dom";
+
 //Firebase config
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -18,9 +21,18 @@ const firebaseConfig = {
 }; // Initialize Firebase
 
 function Agendamento() {
+   //Configurações firebase
    const app = initializeApp(firebaseConfig);
    const analytics = getAnalytics(app);
    const db = getDatabase(app);
+
+   //Verificar qual rota de equipamento está em uso
+   const { item } = useParams();
+   let itemTitle = item.replace(/-/g, " ");
+   itemTitle = itemTitle[0].toUpperCase() + itemTitle.substring(1);
+
+   //Adicionando titulo ao window
+   document.title = `Agendar ${itemTitle} - EP Aracati`;
 
    const selectDisponiveis = {
       options: [
@@ -142,9 +154,10 @@ function Agendamento() {
    };
 
    const setScheduleData = () => {
+      // Criando um objeto que será adicionado a DB
       const scheduleData = {
          equipamento: document.getElementById("select-available").value,
-         professor: "Márcia Porto Viana",
+         professor: "Lucas Davi da Silva",
          data: document.querySelector(".selected-day").getAttribute("value"),
          turma: document.getElementById("select-class").value,
          horarios: {
@@ -152,14 +165,12 @@ function Agendamento() {
             horario_final: document.getElementById("select-endTime").value,
          },
       };
-
-      console.log(scheduleData);
    };
 
    return (
       <main className="mt-20 max-w-[750px] mx-auto p-4 flex flex-col gap-7">
          <h2 className="text-2xl font-bold text-white text-center">
-            Agendar Equipamento
+            Agendar {itemTitle ? itemTitle : "equipamento"}
          </h2>
          <div className="flex max-md:flex-col gap-6 justify-between items-center">
             <Datepicker />

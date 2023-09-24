@@ -1,11 +1,11 @@
+import {Link} from "react-router-dom";
 import { HiPlus } from "react-icons/hi2";
 
-function DropdownButton({dropdownFunc}) {
-
+function DropdownButton({ dropdownFunc }) {
    const toggleDropdown = () => {
       document.getElementById("dropdown").classList.toggle("hidden");
    };
-   
+
    return (
       <div>
          {/* Button */}
@@ -22,37 +22,37 @@ function DropdownButton({dropdownFunc}) {
             className="hidden bottom-70 absolute my-4 text-base drop-shadow bg-gray-50 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 border dark:border-gray-500 w-30"
             id="dropdown"
          >
-            <a
-               href="#"
+            <Link
+               to="/agendar/projetor"
                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                role="menuitem"
             >
                Projetores
-            </a>
+            </Link>
 
-            <a
-               href="#"
+            <Link
+               to="/agendar/notebook"
                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                role="menuitem"
             >
                Notebooks
-            </a>
+            </Link>
 
-            <a
-               href="#"
+            <Link
+               to="/agendar/caixa-de-som"
                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                role="menuitem"
             >
                Caixas de Som
-            </a>
+            </Link>
 
-            <a
-               href="#"
+            <Link
+               to="/agendar/sala"
                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                role="menuitem"
             >
                Salas
-            </a>
+            </Link>
          </div>
       </div>
    );
