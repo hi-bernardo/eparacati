@@ -20,7 +20,7 @@ function Footer() {
                </div>
                <div className="grid grid-cols-2 gap-8 sm:gap-6">
                   <div>
-                     <h2 className="mb-6 font-sm font-semibold text-gray-900 uppercase dark:text-white">
+                     <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                         LEGAL
                      </h2>
                      <ul className="text-gray-500 dark:text-gray-400 font-medium sm:flex flex-row sm:gap-4">
@@ -43,7 +43,7 @@ function Footer() {
                      </ul>
                   </div>
                   <div>
-                     <h2 className="mb-6 font-sm font-semibold text-gray-900 uppercase dark:text-white">
+                     <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                         PROJETO
                      </h2>
                      <ul className="text-gray-500 dark:text-gray-400 font-medium sm:flex flex-row sm:gap-4">
