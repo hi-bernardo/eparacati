@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 //React router
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 //Icons
 import {
@@ -19,8 +19,14 @@ import Logo from "../../../assets/logos/LogoEP_V.svg";
 import Overlay from "../Overlay";
 
 function Menu() {
+   //setando o estado do menu
    const [menuOpened, setMenuOpened] = useState(false);
 
+   //verificando a rota atual
+   const activeRoute = useLocation();
+   const currentRoute = activeRoute.pathname;
+
+   //Função que ativa e desativa o menu
    const toggleMenu = () => {
       setMenuOpened((current) => !current);
       document
@@ -77,7 +83,9 @@ function Menu() {
                            <li>
                               <Link
                                  to="/"
-                                 className="block py-2 pl-3 pr-4 rounded md:bg-transparent text-primary md:p-0 dark:text-white md:dark:text-primary"
+                                 className={`${
+                                    currentRoute == "/" ? "text-primary" : ""
+                                 } block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primaryDark md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
                                  aria-current="page"
                               >
                                  Início
@@ -86,7 +94,11 @@ function Menu() {
                            <li>
                               <Link
                                  to="/agendamentos"
-                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primaryDark md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                 className={`${
+                                    currentRoute.includes("agendamentos")
+                                       ? "text-primary"
+                                       : ""
+                                 } block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primaryDark md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
                               >
                                  Agendamentos
                               </Link>
@@ -94,7 +106,11 @@ function Menu() {
                            <li>
                               <Link
                                  to="/livros"
-                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primaryDark md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                 className={`${
+                                    currentRoute.includes("livros")
+                                       ? "text-primary"
+                                       : ""
+                                 } block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primaryDark md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
                               >
                                  Livros
                               </Link>

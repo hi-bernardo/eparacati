@@ -5,3 +5,7 @@
 body {
    font-family: 'Inter', sans-serif;
 }
+
+.text-primary {
+   color: #31a309 !important;
+}
