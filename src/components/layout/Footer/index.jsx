@@ -11,7 +11,7 @@ function Footer() {
          <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div className="lg:flex lg:justify-between">
                <div className="mb-6 lg:mb-0">
-                  <a href="/" className="flex items-center">
+                  <a href="/" className="flex items-center w-fit">
                      <img src={Logo} className="h-8 mr-3" alt="EP Logo" />
                      <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
                         EP Aracati

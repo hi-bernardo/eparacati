@@ -69,7 +69,7 @@ function Menu() {
                      <Link to="/" className="flex ml-2 md:mr-24">
                         <img
                            src={Logo}
-                           className="h-10 mr-3"
+                           className="h-10 w-fit mr-3"
                            alt="EP Aracati Logo"
                         />
                      </Link>
