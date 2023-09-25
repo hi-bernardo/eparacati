@@ -114,15 +114,15 @@ function Datepicker() {
 
    return (
       /* date-picker */
-      <div className="flex justify-center items-center select-none">
+      <div className="flex justify-center items-center select-none w-full">
          {/* card */}
-         <div className="card bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 w-96 max-sm:w-72 rounded-2xl">
+         <div className="card bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 w-96 max-sm:w-full rounded-2xl">
             <div className="calendar-toolbar border-b border-gray-200 dark:border-gray-800 flex justify-between items-center p-5 pb-4">
-               <button className="prev month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+               <button className="prev month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                   <HiChevronLeft />
                </button>
                <div className="current-month text-gray-950 dark:text-gray-50 text-xl max-md:text-lg max-sm:text-base text-center font-bold break-words"></div>
-               <button className="next month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+               <button className="next month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                   <HiChevronRight />
                </button>
             </div>
@@ -150,7 +150,7 @@ function Datepicker() {
                      Sab
                   </div>
                </div>
-               <div className="calendar-days grid grid-cols-7 text-gray-900 dark:text-gray-100 px-4 pb-3"></div>
+               <div className="calendar-days grid grid-cols-7 text-gray-900 dark:text-gray-100 px-4 pb-3 place-items-center"></div>
             </div>
          </div>
       </div>
