@@ -31,7 +31,7 @@
 }
 
 .selected-day {
-   background-color: #37b10e;
+   background-color: #29720e;
    color: #fefefe;
    border-radius: 15px;
    font-weight: 700;
@@ -48,10 +48,10 @@
 .month-day:hover,
 .btn:hover {
    border-radius: 15px;
-   color: #37b10e;
+   color: #299405;
    transition: 0.1s;
    cursor: pointer;
-   box-shadow: inset 0px 0px 0px 1.5px #37b10e;
+   box-shadow: inset 0px 0px 0px 1.5px #299405;
 }
 .prev-month-day,
 .next-month-day {
@@ -63,6 +63,6 @@
 .month-day:focus,
 .btn:focus {
    border-radius: 15px;
-   background-color:#37b10e;
+   background-color:#258b03;
    color: #f8f7fa;
 } */
