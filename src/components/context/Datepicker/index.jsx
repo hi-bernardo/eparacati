@@ -116,7 +116,7 @@ function Datepicker() {
       /* date-picker */
       <div className="flex justify-center items-center select-none w-full">
          {/* card */}
-         <div className="card bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 w-96 max-sm:w-full rounded-2xl">
+         <div className="card bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 w-96 max-sm:w-full rounded-2xl q">
             <div className="calendar-toolbar border-b border-gray-200 dark:border-gray-800 flex justify-between items-center p-5 pb-4">
                <button className="prev month-btn text-2xl text-gray-900 bg-gray-50 border border-gray-300 focus:outline-none hover:bg-gray-200 font-medium rounded-lg px-3 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                   <HiChevronLeft />
