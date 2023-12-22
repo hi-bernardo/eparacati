@@ -1,5 +1,6 @@
 import Datepicker from "../../components/context/Datepicker";
 import Select from "../../components/layout/Select";
+import Checkbox from "../../components/layout/Checkbox";
 
 //React Router
 import { useParams } from "react-router-dom";
@@ -187,16 +188,9 @@ function Agendamento() {
                   placeholder="Escolha uma turma"
                   options={selectTurma.options}
                />
-               <Select
-                  label="Horário inicial:"
-                  id="select-startTime"
-                  placeholder="Escolha o horário de início"
-                  options={selectAula.options}
-               />
-               <Select
-                  label="Horário final"
-                  id="select-endTime"
-                  placeholder="Escolha o horário de final"
+               <Checkbox
+                  label="Horário:"
+                  id="checkbox-time"
                   options={selectAula.options}
                />
             </div>
